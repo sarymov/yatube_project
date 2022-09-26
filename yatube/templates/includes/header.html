@@ -4,13 +4,7 @@
   <head>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <title> 
-    {% if title == 'Главная страница' %}
-        Вы на главной странице.
-    {% elif title == 'Вложенная страница' %}
-        Вы в одном клике от главной страницы!
-    {% else %}
-        Мы понятия не имеем, где вы!
-    {% endif %} </title>
+    </title>
     <head>    
         <meta charset="utf-8"> <!-- Кодировка сайта -->
         <!-- Сайт готов работать с мобильными устройствами -->
@@ -24,7 +18,7 @@
         <meta name="theme-color" content="#ffffff">
         <!-- Подключен файл со стандартными стилями бустрап -->
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-        <title>Последние обновления на сайте</title>
+        <title></title>
       </head>
       <body>
         <header>
@@ -32,7 +26,7 @@
           <!-- В дальнейшем тут будет создано полноценное меню -->
           <nav class="navbar navbar-light" style="background-color: lightskyblue">
             <div class="container">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="{% url 'posts:main_page' %}">
                 <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
                 <!-- тег span используется для добавления нужных стилей отдельным участкам текста -->
                 <span style="color:red">Ya</span>tube
